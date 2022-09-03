@@ -3,6 +3,7 @@ package br.com.challenge.financial.control.infra.dto;
 import br.com.challenge.financial.control.domain.entity.Expense;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.domain.Page;
 
@@ -12,6 +13,7 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Builder
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class ExpenseDto {

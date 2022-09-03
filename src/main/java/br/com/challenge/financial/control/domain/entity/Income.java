@@ -1,5 +1,6 @@
 package br.com.challenge.financial.control.domain.entity;
 
+import br.com.challenge.financial.control.infra.dto.IncomeDto;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -28,4 +29,12 @@ public class Income {
 
     @Column(nullable = false)
     private LocalDate date;
+
+    public Income dtoToIncome(IncomeDto incomeDto) {
+        this.id = incomeDto.getId();
+        this.description = incomeDto.getDescription();
+        this.value = incomeDto.getValue();
+        this.date = incomeDto.getDate();
+        return this;
+    }
 }
