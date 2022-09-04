@@ -4,6 +4,7 @@ import br.com.challenge.financial.control.domain.entity.Expense;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
+import java.util.List;
 import java.util.Optional;
 
 public interface ExpenseRepository {
@@ -17,4 +18,6 @@ public interface ExpenseRepository {
     Expense updateExpense(Expense expense);
 
     void deleteExpense(Long id);
+
+    List<Expense> listAllExpense();
 }

@@ -8,6 +8,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Repository;
 
+import java.time.LocalDate;
+import java.util.List;
 import java.util.Optional;
 
 @Repository
@@ -39,5 +41,10 @@ public class IncomeRepositoryImp implements IncomeRepository {
     @Override
     public void deleteIncome(Long id) {
         jpa.deleteById(id);
+    }
+
+    @Override
+    public List<Income> listAllIncomes() {
+        return jpa.findAll();
     }
 }

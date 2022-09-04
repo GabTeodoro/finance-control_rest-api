@@ -6,6 +6,7 @@ import br.com.challenge.financial.control.domain.port.ExpenseRepository;
 import br.com.challenge.financial.control.domain.port.IncomeRepository;
 import br.com.challenge.financial.control.infra.dto.ExpenseDto;
 import br.com.challenge.financial.control.infra.dto.IncomeDto;
+import br.com.challenge.financial.control.infra.util.ValidateCreation;
 import br.com.challenge.financial.control.usecase.CreateExpense;
 import br.com.challenge.financial.control.usecase.CreateIncome;
 import lombok.AllArgsConstructor;
@@ -17,9 +18,11 @@ import org.springframework.stereotype.Service;
 public class CreateExpenseCase implements CreateExpense {
 
     private ExpenseRepository repository;
+    private ValidateCreation validation;
 
     @Override
-    public ResponseEntity execute(ExpenseDto expenseDto) {
+    public ResponseEntity execute(ExpenseDto expenseDto) throws Exception {
+        validation.validateNewExpense(expenseDto);
         Expense expense = new Expense();
         expense.dtoToExpense(expenseDto);
         repository.createNewExpense(expense);

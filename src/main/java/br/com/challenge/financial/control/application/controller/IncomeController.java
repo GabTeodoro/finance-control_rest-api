@@ -34,12 +34,12 @@ public class IncomeController {
     }
 
     @PostMapping
-    public ResponseEntity<IncomeResponse> create(@RequestBody IncomeDto incomeDto) {
+    public ResponseEntity<IncomeResponse> create(@RequestBody IncomeDto incomeDto) throws Exception {
         return create.execute(incomeDto);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<IncomeDto> update(@PathVariable Long id, @RequestBody IncomeDto incomeDto) {
+    public ResponseEntity<IncomeDto> update(@PathVariable Long id, @RequestBody IncomeDto incomeDto) throws Exception {
         return update.execute(id, incomeDto);
     }
 

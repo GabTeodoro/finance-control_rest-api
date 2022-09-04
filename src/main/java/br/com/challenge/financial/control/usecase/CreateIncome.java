@@ -5,5 +5,5 @@ import org.springframework.http.ResponseEntity;
 
 public interface CreateIncome {
 
-    ResponseEntity execute(IncomeDto incomeDto);
+    ResponseEntity execute(IncomeDto incomeDto) throws Exception;
 }

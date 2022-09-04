@@ -4,6 +4,8 @@ import br.com.challenge.financial.control.domain.entity.Income;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
+import java.time.LocalDate;
+import java.util.List;
 import java.util.Optional;
 
 public interface IncomeRepository {
@@ -17,4 +19,6 @@ public interface IncomeRepository {
     Income updateIncome(Income income);
 
     void deleteIncome(Long id);
+
+    List<Income> listAllIncomes();
 }

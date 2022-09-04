@@ -8,6 +8,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Repository;
 
+import java.util.List;
 import java.util.Optional;
 
 @Repository
@@ -39,5 +40,10 @@ public class ExpenseRepositoryImp implements ExpenseRepository {
     @Override
     public void deleteExpense(Long id) {
         jpa.deleteById(id);
+    }
+
+    @Override
+    public List<Expense> listAllExpense() {
+        return jpa.findAll();
     }
 }

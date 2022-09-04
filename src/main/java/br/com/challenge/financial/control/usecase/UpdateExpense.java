@@ -5,5 +5,5 @@ import org.springframework.http.ResponseEntity;
 
 public interface UpdateExpense {
 
-    ResponseEntity execute(Long id, ExpenseDto expenseDto);
+    ResponseEntity execute(Long id, ExpenseDto expenseDto) throws Exception;
 }

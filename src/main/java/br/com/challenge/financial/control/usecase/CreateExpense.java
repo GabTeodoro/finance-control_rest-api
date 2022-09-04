@@ -5,5 +5,5 @@ import org.springframework.http.ResponseEntity;
 
 public interface CreateExpense {
 
-    ResponseEntity execute(ExpenseDto expenseDto);
+    ResponseEntity execute(ExpenseDto expenseDto) throws Exception;
 }

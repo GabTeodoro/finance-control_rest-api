@@ -36,12 +36,12 @@ public class ExpenseController {
     }
 
     @PostMapping
-    public ResponseEntity<ExpenseResponse> create(@RequestBody ExpenseDto expenseDto) {
+    public ResponseEntity<ExpenseResponse> create(@RequestBody ExpenseDto expenseDto) throws Exception {
         return create.execute(expenseDto);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<IncomeDto> update(@PathVariable Long id, @RequestBody ExpenseDto expenseDto) {
+    public ResponseEntity<IncomeDto> update(@PathVariable Long id, @RequestBody ExpenseDto expenseDto) throws Exception {
         return update.execute(id, expenseDto);
     }
 
