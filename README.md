@@ -12,7 +12,7 @@
 <p align="center">
  Challenge criado pela plataforma de desenvolvimento Alura (https://www.alura.com.br) com o objetivo de 
  implementar uma rest api onde os usuários podem cadastrar suas rendes, despesas fixas e variáveis do mês 
- para ter maior visualização e control dos seus gastos.
+ para ter maior visualização e controle dos seus gastos.
 </p>
 <h4 align="center">Status
 	🚧  Em construção...  🚧
