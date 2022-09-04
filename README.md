@@ -1,4 +1,4 @@
-<h1 align="center">Finace Control Rest API</h1>
+<h1 align="center">Finance Control Rest API</h1>
 
 ## Índice
 
